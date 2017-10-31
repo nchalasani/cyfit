@@ -1,0 +1,117 @@
+<div [@routerTransition]>
+    <app-page-header [heading]="'Dashboard'" [icon]="'fa-bar-chart-o'"></app-page-header>
+  
+   
+
+    <div class="row">
+        <!--
+        <div class="col col-sm-6">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Radar Chart
+                </div>
+                <div class="card-block">
+                    <canvas baseChart height="150px" [datasets]="radarChartData" [labels]="radarChartLabels" [chartType]="radarChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        <div class="col col-sm-6">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Pie Chart
+                </div>
+                <div class="card-block">
+                    <canvas baseChart height="150px" [data]="pieChartData" [labels]="pieChartLabels" [chartType]="pieChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col col-sm-6">
+            <div class="card mb-3">
+                <div class="card-header">
+                    Polar Area Chart
+                </div>
+                <div class="card-block">
+                    <canvas baseChart height="130px" [data]="polarAreaChartData" [labels]="polarAreaChartLabels" [legend]="polarAreaLegend" [chartType]="polarAreaChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+    -->
+        
+        <div class="col-xl-4 col-lg-4 col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    Software Risk
+                </div>
+                <div class="card-block">
+                   <color-band-gauge fxFlex="25%" [options]="gaugeOptionsSoftware"></color-band-gauge>
+                </div>
+             </div>      
+        </div>
+
+        <div class="col-xl-4 col-lg-4 col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    People Risk
+                </div>
+                <div class="card-block">
+                   <color-band-gauge fxFlex="25%" [options]="gaugeOptionsPeople"></color-band-gauge>
+                </div>
+             </div>      
+        </div>
+        <div class="col-xl-4 col-lg-4 col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    Operating System Risk
+                </div>
+                <div class="card-block">
+                   <color-band-gauge fxFlex="25%" [options]="gaugeOptionsOS"></color-band-gauge>
+                </div>
+             </div>      
+        </div>
+
+    </div>
+
+    <div class="row">
+            <div class="col-xl-4 col-lg-4 col-sm-4">
+                <div class="card">
+                    <div class="card-header">
+                        Internal Risk % by Category and Date
+                    </div>
+                    <div class="card-block">
+                        <canvas baseChart  [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [legend]="barChartLegend" [chartType]="barChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                        </canvas>
+                    </div>
+                </div>
+            </div>
+          
+        <div class="col-xl-4 col-lg-4 col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    Internal Risk % in the last 15 days
+                </div>
+                <div class="card-block">
+                    <canvas baseChart [datasets]="lineChartData" [labels]="lineChartLabels" [options]="lineChartOptions" [colors]="lineChartColors" [legend]="lineChartLegend" [chartType]="lineChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-xl-4 col-lg-4 col-sm-4">
+            <div class="card">
+                <div class="card-header">
+                    Internal Risk % by Category
+                </div>
+                <div class="card-block">
+                    <canvas baseChart  [data]="pieChartData" [labels]="pieChartLabels" [options]="pieChartOptions" [chartType]="pieChartType" (chartHover)="chartHovered($event)" (chartClick)="chartClicked($event)">
+                    </canvas>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
